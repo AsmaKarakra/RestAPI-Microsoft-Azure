@@ -1,0 +1,21 @@
+What are synchronous web apps?#
+
+Synchronous web apps start executing at the very top of a file and execute all the way down to the bottom of the file. These web apps run each line in order and stop at the bottom.
+
+Let us have a look at the visualization below to understand the concept better.
+
+
+What are asynchronous web apps?#
+
+Asynchronous web apps also start out very similar to synchronous web apps. An asynchronous app will start at the top of the file and execute the code until it gets to the bottom, but during that execution, it will run into certain asynchronous functions or code that will split off and execute that asynchronous code separately from the rest of the code. This is usually because it needs to wait for or reduce some operation that takes a long period of time.
+
+Let us have a look at the visualization below to understand the concept better.
+
+Difference between synchronous and asynchronous web apps#
+
+    Synchronous web apps execute from the top to the bottom, but the asynchronous code will start at the top and execute until it hits something that is asynchronous. It will execute that and the rest of the code at the exact same time and it will do the same for every asynchronous thing it hits.
+
+    In asynchronous apps, there may be multiple different threads running different code in different sections, and the code may execute in a different order. In comparison, in synchronous apps, the code always executes in the exact same order and that is primarily where the difference comes from.
+
+    Asynchronous apps are harder to work with because they can execute in a different order every single time. This means that you have to make sure that your code works no matter which path it takes, whether it executes everything in order or reverse order or any other scrambled order that you haven’t thought of before.
+
