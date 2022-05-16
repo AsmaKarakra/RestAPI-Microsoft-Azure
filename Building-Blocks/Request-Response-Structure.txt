@@ -1,0 +1,68 @@
+CRUD is an abbreviation for Create, Read, Update, and Delete.
+
+These are some of the main things that you might want to do when you are communicating with your client and server
+
+ On a REST API, the equivalent of those are actually HTTP methods or HTTPS operations.
+ 
+ 
+ 
+ 
+
+What’s the equivalent of “create” in an HTTP method?
+
+It is POST. A POST request is used to send data to the server, for example, customer information, 
+file upload, some confidential data, etc. In other words, we use POST when we want to submit the
+data to the server, which needs to be processed by the specified resource.
+
+
+
+
+What’s the equivalent of “read” in an HTTP method?
+
+It is GET. The GET method is used to retrieve or get the information from the given server using a 
+given URI. Requests using GET should only retrieve data and should have no other effect on the data. 
+Any changes in the data should be done using the POST request only.
+
+
+
+
+What’s the equivalent of “update” in an HTTP method?
+
+It is PUT. The PUT operation replaces or updates all the current representations of the target resource with the uploaded/sent content.
+
+What’s the equivalent of “delete” in an HTTP method?
+
+It is DELETE. The DELETE operation removes or deletes all the current representations of the target resource given by a URI.
+
+
+What is the structure of a request?
+
+There are majorly four elements in a request.
+
+    Operation: These are the HTTP methods that we discussed above.
+    Endpoint: This is your REST API endpoint.
+    Parameters/body: This is some data that you might send in the request. We will see some examples in a moment.
+    Headers: This is a special part of a REST API request that might contain things like an API key or some authentication data.
+
+
+
+What is the structure of a response?#
+
+This is typically in the form of JSON data, but the REST API can also return XML, YAML, or any other format depending on what the client requests.
+
+Let’s return to our example and look at a few different scenarios that might happen with your ice cream shop.
+
+You want to display what is currently in stock. We want to get the flavors that are in stock. Now, what does our REST API request
+look like? You have a GET as the operation because you want to get those flavors, and the endpoint is /api/flavors. 
+In response, you will get an array of those flavor resources. We see strawberries and mint chocolate in stock.
+
+Because mint chocolate is a popular flavour, the store runs out of it and you decide to replace it with chocolate. So now you
+want to update the flavors. You want to update or replace that mint chocolate with just chocolate. What does our request look 
+like? It is a PUT operation, which updates or replaces. The endpoint is /api/flavors/1 to indicate the ID of 1 you want to replace.
+In the parameter body, you specify the flavor of chocolate, which is the new flavor that has replaced mint chocolate. In response, 
+we see indeed acknowledging that the ID of 1 is replaced with the flavor of chocolate.
+
+Great! Good news: The store just received a shipment of a brand new experimental flavor called restful raspberry. You want this new
+ice cream flavor to appear on your website. So, we want to create a new flavor. How do we do that with the REST API? Well, in our 
+operation, it is a POST operation, which will create a new flavor. The endpoint is once again /api/flavors, and we included the 
+flavor that we wanted to create (restful raspberry). In response, we see a new ID of 2 was created, and the flavor is restful raspberry.
