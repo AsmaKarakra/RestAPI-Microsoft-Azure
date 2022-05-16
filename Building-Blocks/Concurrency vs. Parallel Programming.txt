@@ -1,0 +1,17 @@
+Concurrent programming refers to when an application is making progress on more than one task at the same time (concurrently). 
+If the computer has only one CPU, the application may not make progress or execute on more than one task at the same time, 
+but more than one task is being processed at a time inside the application. 
+It does not finish one task before it begins the next.
+
+
+
+
+    Concurrency means executing multiple tasks at the same time but not necessarily simultaneously.
+
+
+Parallel programming refers to the process whereby a computer makes progress on more than one task simultaneously. 
+This usually happens due to more than one CPU or CPU core being present.
+
+
+
+    Parallel programming means executing multiple tasks at the same time simultaneously.
