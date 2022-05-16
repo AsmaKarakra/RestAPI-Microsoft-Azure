@@ -1,0 +1,5 @@
+          Threads 	                                                                                     Coroutines
+          Pre-emptive 	                                                                                Co-operative
+The operating system decides when to context switch to another task. 	      The tasks themselves decide when to hand over the control.
+Can switch to another thread at any point in time. 	                        Only switched to another coroutine when there is an “await” keyword.
+Using locks, we can tell when it is impossible to go to another thread. 	  Using await, we can tell when it is possible to go to another coroutine.
